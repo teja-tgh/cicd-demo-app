@@ -11,6 +11,12 @@ pipeline {
                 bat 'mvn clean install -DskipTests'
             }
         }
+        stage('Testing') {
+            steps {
+                bat 'mvn clean test'
+            }
+        }
+        
 
         stage('Publish to Exchange') {
             steps {
