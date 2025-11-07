@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     echo env.GIT_BRANCH?.toLowerCase() ?: 'branch not found'
-                    bat 'mvn clean deploy -DskipTests'
+                    bat 'mvn clean deploy'
                 }
             }
         }
