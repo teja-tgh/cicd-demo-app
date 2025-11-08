@@ -54,7 +54,7 @@ pipeline {
         stage('Build and Deploy') {
             steps {
                 script {
-                    deployToAnypoint('SandBox', 'cicd-demo-app')
+                    deployToAnypoint('dev', 'cicd-demo-app')
                 }
             }
         }
