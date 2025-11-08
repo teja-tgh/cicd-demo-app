@@ -61,6 +61,7 @@
 				<configuration>
 					<coverage>
 						<runCoverage>true</runCoverage>
+						<requiredApplicationCoverage>90</requiredApplicationCoverage>
 						<formats>
 							<format>html</format>
 						</formats>

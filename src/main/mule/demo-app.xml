@@ -28,4 +28,16 @@ payload]]></ee:set-payload>
 		</ee:transform>
 		<logger level="INFO" doc:name="end-logger" doc:id="ea540d8a-9e95-4998-9795-a1e30d6731f8" message="#[payload]"/>
 	</flow>
+	<flow name="demo-appFlow" doc:id="d1cfa8cc-c754-48da-a81d-850816af1c77" >
+		<http:listener doc:name="Listener" doc:id="5170ce9b-85cb-4b6a-adb0-07062daf603f" config-ref="HTTP_Listener_config" path="/test"/>
+		<ee:transform doc:name="Transform Message" doc:id="3b17136e-e962-4e7f-9d0e-de636eac0b99" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="62983a5f-a9c2-436c-bc48-1fb5c2102cd6" />
+	</flow>
 </mule>
